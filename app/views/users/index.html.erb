@@ -1,0 +1,41 @@
+
+<div class="total">
+      <h1 class="logo-img1">BLOG</h1>
+        <div class="drop_down">
+            <ul>
+             
+                <%if session[:user_id] !=nil%>
+                    <li class="user_pers">
+                        <i class="fa-solid fa-user logout"></i>
+                        <% logged_user=User.find(session[:user_id]) %>
+                            <%= logged_user["name"]%>
+                                <ul class="dropdown_logout">
+                                <li><a href="#">Profile</a></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                    </li>
+                    <%else%>
+                        <a href="/login" class="login_btn">SIGN IN</a>
+                        <a href="/signup" class="signup_btn">SIGN UP</a>
+                        <%end%>
+
+
+        </div>
+</div>
+<p class="sign_heading">Create your Profile</p>
+<%= image_tag("Group 7.png",alt: "sign_up" ,class: "signup_image" , id:"signup_image") %>
+<div class="sign_box">
+    <form action="users/create" method="post" onsubmit="submitFunction()">
+        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+        <input type=" text" placeholder="First_name" name="users[name]" id="sign_inp11" required>
+        <input type="email" placeholder="Email" name="users[email]" id="sign_inp12" required>
+        <input type="password" placeholder="Create_password" id="sign_inp3" name="users[password]" title="Please enter the password between 6 to 12 characters"  required>
+        <input type="password" placeholder="Confirm_password" name="users[confirm_password]" id="sign_inp4" title="Please Enter the same password entered in the create password " required>
+        <button type="submit" class="f_sub1">Submit</button>
+        <% if flash[:error]%>
+            <p class="text-error">
+                <%= flash[:error] %>
+            </p>
+            <% end %>
+    </form>
+</div>

@@ -1,0 +1,39 @@
+
+<div class="total">
+      <h1 class="logo-img1">BLOG</h1>
+        <div class="drop_down">
+            <ul>
+             
+                <%if session[:user_id] !=nil%>
+                    <li class="user_pers">
+                        <i class="fa-solid fa-user logout"></i>
+                        <% logged_user=User.find(session[:user_id]) %>
+                            <%= logged_user["name"]%>
+                                <ul class="dropdown_logout">
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                    </li>
+                    <%else%>
+                        <a href="/login" class="login_btn">SIGN IN</a>
+                        <a href="/signup" class="signup_btn">SIGN UP</a>
+                        <%end%>
+
+
+        </div>
+</div><br>
+
+<% @list_blog.each do|item| %>
+<div class="full_blog">
+<h1 class="blog_title"><%=item.blog_title%></h1><hr>
+<h4 class="blog_description"><%=item.blog_description%></h4>
+<%= image_tag(item.blog_image,class: "blog_image" )%><hr>
+<i class="fa-regular fa-thumbs-up like"></i>
+<%if session[:user_id] !=nil%>
+ <% logged_user=User.find(session[:user_id]) %>
+<a href="/comment/<%=item.id%>"><i class="fa-regular fa-comment comment"></i></a>
+</div><br><br><br>
+<%end%>
+
+<% end %>
+

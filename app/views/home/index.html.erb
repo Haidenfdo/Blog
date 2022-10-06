@@ -1,0 +1,33 @@
+<div class="total2">
+<%= image_tag("Untitled.png",alt: "blog" ,class: "total1" , id:"blog_img") %>
+     <h1 class="logo-img">B L O G</h1>
+              <div class="drop_down">
+            <ul>
+                <ul>      
+                    <li>         
+                    </li>
+                    <li><a href="newblog">Blog</a><li>
+                </ul>
+                <%if session[:user_id] !=nil%>
+                    <li class="user_pers">
+                        <i class="fa-solid fa-user logout"></i>
+                        <% logged_user=User.find(session[:user_id]) %>
+                            <%= logged_user["name"]%>
+                                <ul class="dropdown_logout">
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                    <li><a href="/myblogs">My blogs</a></li>
+                                </ul>
+                    </li>
+                    <%else%>
+                        <a href="/login" class="login_btn1">SIGN IN</a>
+                        <a href="/signup" class="signup_btn1">SIGN UP</a>
+                        <%end%>
+<h1 class="blog_head">Publish  Your  Passions, Your  Way</h1>
+<p class="blog_sub">Create a Unique and beautiful blog.It's free and easy</p>
+<i class="fa-solid fa-gear settings"></i>
+<i class="fa-solid fa-music music"></i>
+<i class="fa-solid fa-city city"></i>
+<i class="fa-solid fa-earth-americas earth"></i>
+</div>
+</div>

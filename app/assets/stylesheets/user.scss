@@ -1,0 +1,371 @@
+* {
+    font-size: 20px;
+}
+
+.nav_menu {
+    margin-left: 35%;
+}
+.log_box {
+    width: 40%;
+    height: 30%;
+}
+
+.login_btn {
+    border: none;
+    margin-left: 48%;
+    margin-top: 1.5%;
+    font-size: 22px;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    position: absolute;
+    color: white;
+}
+.total1 {
+    width: 100%;
+    height: 99vh;
+    margin-top: 5%;
+    position: absolute;
+}
+.login_btn1 {
+    border: none;
+    margin-left: 40%;
+    margin-top: 10%;
+    font-size: 22px;
+    position: absolute;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.signup_btn {
+    position: absolute;
+    margin-left: 58%;
+    margin-top: 1.5%;
+    font-size: 22px;
+    width: 10%;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    color: white
+}
+.signup_btn1 {
+    position: absolute;
+    margin-left: 6%;
+    margin-top: -2%;
+    font-size: 22px;
+    width: 10%;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    color: black
+}
+.blog_title{
+   font-size: 30px;
+   margin-left: 44%;
+   font-family: Arial, Helvetica, sans-serif;
+   color: red;
+}
+.comment{
+    font-size: 40px;
+    margin-left: 20%;
+    color: black;
+}
+.like{
+    font-size: 40px;
+    margin-left: 14%;
+    color: black;
+}
+.delete{
+    font-size: 40px;
+    margin-left: 26%;
+    color: black;
+}
+.edit{
+    font-size: 40px;
+    margin-left: 28%;
+    color: black;
+}
+.error_main{
+    color: red;
+    margin-left: 28%;
+    margin-top: 6%;
+    font-size: 30px;
+}
+.full_blog{
+    height: auto;
+    width: 99%;
+    border: #1e6d5b solid 4px;
+}
+.blog_image{
+  width: 20%;
+}
+.cont {
+    color: #86DB99;
+}
+.f_sub1 {
+    margin-left: -44%;
+    margin-top: 52%;
+    margin-bottom: 5%;
+    width: 64%;
+    height: 75px;
+    background-color: #22b9b1;
+    color: white;
+    font-weight: 900;
+    font-size: larger;
+    border: none;
+    position: absolute;
+}
+
+.logo-img {
+    font-size: xx-large;
+    position: absolute;
+    margin-top: 2%;
+    font-weight:900;
+    color: black;
+}
+.logo-img1 {
+    font-size: xx-large;
+    position: absolute;
+    margin-top: 2%;
+    font-weight:900;
+    color: rgb(245, 243, 243);
+}
+.blog_head{
+    font-size: 50px;
+    margin-left: 26%;
+    margin-top: 4%;
+    color: rgb(245, 243, 243);
+}
+.blog_sub{
+    margin-top: 3%;
+    margin-left: 30%;
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(245, 243, 243);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin-left: 25%;
+    padding-top: 1%;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+}
+
+ul li a {
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #86DB99;
+}
+
+ul li ul.dropdown {
+    min-width: 100%;
+    /* Set width of the dropdown */
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    /* Display the dropdown */
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown_logout {
+    background: #888686;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+
+ul li:hover ul.dropdown_logout {
+    display: block;
+}
+
+ul li ul.dropdown_logout li {
+    display: block;
+}
+#sign_inp11 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: -44%;
+    margin-top: -20%;
+    position: absolute;
+    width: 60%;
+    height: 75px;
+    background-color: rgb(203, 201, 201);
+    font-size: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 3.5%;
+}
+
+#sign_inp12 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: -44%;
+    margin-top: -2%;
+    width: 60%;
+    height: 75px;
+    font-size: 20px;
+    position: absolute;
+    background-color: rgb(203, 201, 201);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 3.5%;
+}
+
+#sign_inp3 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: -44%;
+    margin-top: 16%;
+    width: 60%;
+    height: 75px;
+    font-size: 20px;
+    position: absolute;
+    background-color: rgb(203, 201, 201);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 3.5%;
+}
+
+#sign_inp2 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: 24%;
+    margin-top: 6%;
+    width: 50%;
+    height: 55px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: aliceblue;
+    padding-left: 3.5%;
+}
+
+#sign_inp4 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: -44%;
+    margin-top: 34%;
+    width: 60%;
+    height: 75px;
+    font-size: 20px;
+    position: absolute;
+    background-color: rgb(203, 201, 201);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 3.5%;
+}
+.signup_image {
+    width: 50%;
+    height: 88.4vh;
+    margin-left: 50%;
+    margin-top: 0%;
+}
+.sign_box {
+    width: 40%;
+    height: 30%;
+    margin-left: 29%;
+    margin-top: -30%;
+    position: absolute;
+}
+.sign_heading {
+    position: absolute;
+    margin-top: 6%;
+    font-size: 50px;
+    margin-left: 64%;
+    font-weight: bolder;
+}
+.user_pers {
+    margin-left: 60%;
+    margin-top: -2%;
+    position: absolute;
+}
+.logout {
+    margin-left: 100%;
+    border: none;
+    font-size: 40px;
+    position: absolute;
+    margin-top: -2%;
+    color: black;
+}
+.blog_img{
+    position: absolute;
+    margin-top: 10%;
+    width: 50%;
+    height: 44vh;
+    margin-left: -30%;
+}
+.settings{
+    font-size: 80px;
+    color: rgb(144, 142, 142);
+    margin-top: 26%;
+    margin-left: -40%;
+    position: absolute;
+}
+.music{
+    font-size: 80px;
+    color: rgb(144, 142, 142);
+    margin-top: 10%;
+    margin-left: -46%;
+    position: absolute;
+}
+.total2{
+    background-color: rgb(251, 234, 198);
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    position: absolute;
+}
+.city{
+    font-size: 80px;
+    color: rgb(144, 142, 142);
+    margin-top: 10%;
+    margin-left: 34%;
+    position: absolute; 
+}
+.earth{
+    font-size: 80px;
+    color: rgb(144, 142, 142);
+    margin-top: 26%;
+    margin-left: 30%;
+    position: absolute;
+}
+

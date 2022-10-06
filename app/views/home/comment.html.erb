@@ -1,0 +1,16 @@
+<div class="full_blog">
+    <h1 class="blog_title"><%=@showblogs.blog_title%></h1><hr>
+    <h4 class="blog_description"><%=@showblogs.blog_description%></h4>
+    <%= image_tag(@showblogs.blog_image,class: "blog_image" )%><hr>
+    </div>
+        <%BlogComment.where(new_blogs_id:@asw).each do |pg|%>
+<div class="pg_review">
+    <p class="rev_name"><%=User.find(pg.users_id).name%></p>
+    <p class="rev_msg"><%=pg.comment%></p>
+</div><br><br><br>
+<%end%>
+<form action="/comment_save" method="post">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+<input type="text" placeholder="Comment" name="comment[comment]" required>
+<input type="submit">
+</form>

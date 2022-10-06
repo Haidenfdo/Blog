@@ -1,0 +1,38 @@
+<div class="total">
+      <h1 class="logo-img1">BLOG</h1>
+        <div class="drop_down">
+            <ul>
+             
+                <%if session[:user_id] !=nil%>
+                    <li class="user_pers">
+                        <i class="fa-solid fa-user logout"></i>
+                        <% logged_user=User.find(session[:user_id]) %>
+                            <%= logged_user["name"]%>
+                                <ul class="dropdown_logout">
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                    </li>
+                    <%else%>
+                        <a href="/login" class="login_btn">SIGN IN</a>
+                        <a href="/signup" class="signup_btn">SIGN UP</a>
+                        <%end%>
+
+
+        </div>
+</div>
+<p class="sign_heading">Welcome Back</p>
+<%= image_tag("Group 7 (1).png",alt: "sign_up" ,class: "signup_image" , id:"signup_image") %>
+<div class="log_box">
+    <form action="session/create" method="post">
+        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+        <input type="email" placeholder="Email" name="user[email]" id="sign_inp11" required>
+        <input type="password" placeholder="password" name="user[password]" id="sign_inp12" required>
+        <button type="submit" class="f_sub2">Submit</button> %>
+        <% if flash[:error]%>
+            <p class="text-error1">
+                <%= flash[:error] %>
+            </p>
+            <% end %>
+    </form>
+</div>

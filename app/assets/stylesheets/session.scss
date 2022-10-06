@@ -1,0 +1,73 @@
+// Place all the styles related to the session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#sign_inp11 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: -44%;
+    margin-top: -20%;
+    position: absolute;
+    width: 60%;
+    height: 75px;
+    background-color: rgb(203, 201, 201);
+    font-size: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 3.5%;
+}
+.text-error1{
+    position: absolute;
+    margin-top: 34%;
+    margin-left: -30%;
+    color: red;
+    font-weight: 900;
+    font-size: x-large;
+}
+.f_sub2 {
+    margin-left: -44%;
+    margin-top: 16%;
+    margin-bottom: 5%;
+    width: 64%;
+    height: 75px;
+    background-color: #22b9b1;
+    color: white;
+    font-weight: 900;
+    font-size: larger;
+    border: none;
+    position: absolute;
+}
+
+.log_box {
+    width: 40%;
+    height: 30%;
+    margin-left: 29%;
+    margin-top: -20%;
+    position: absolute;
+}
+.log_heading {
+    margin-left: 39%;
+    margin-top: 4%;
+    position: absolute;
+    font-size: 40px;
+}
+
+#sign_inp12 {
+    border-top: black;
+    border-right: black;
+    border-left: black;
+    margin-left: -44%;
+    margin-top: -2%;
+    width: 60%;
+    height: 75px;
+    font-size: 20px;
+    position: absolute;
+    background-color: rgb(203, 201, 201);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 3.5%;
+}
