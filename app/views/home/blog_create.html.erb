@@ -1,33 +1,38 @@
 
-<div class="total">
-      <h1 class="logo-img1">BLOG</h1>
-        <div class="drop_down">
+<div class="total2">
+     <h1 class="logo-img">B L O G</h1>
+              <div class="drop_down">
             <ul>
-             
+                <ul>      
+                    <li> 
+                    <a href="listblog">Blog</a>        
+                    </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">About</a><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Contact</a></li>
+                </ul>
                 <%if session[:user_id] !=nil%>
                     <li class="user_pers">
                         <i class="fa-solid fa-user logout"></i>
                         <% logged_user=User.find(session[:user_id]) %>
                             <%= logged_user["name"]%>
                                 <ul class="dropdown_logout">
-                                <li><a href="#">Profile</a></li>
-                                    <li><a href="/logout">Logout</a></li>
+                                    <li><a href="#">Profile</a></li><br>
+                                    <li><a href="/logout">Logout</a></li><br>
+                                    <li><a href="/myblogs">Myblogs</a></li>
                                 </ul>
                     </li>
                     <%else%>
-                        <a href="/login" class="login_btn">SIGN IN</a>
-                        <a href="/signup" class="signup_btn">SIGN UP</a>
-                        <%end%>
-
-
-        </div>
-</div>
-<h1>Blog Creation</h1>  
-    <form action="/create_blog" method="post" enctype="multipart/form-data">
+                        <a href="/login" class="login_btn1">SIGN IN</a>
+                        <a href="/signup" class="signup_btn1">SIGN UP</a>
+                        <%end%> 
+                        <%= image_tag("blog1-unscreen.gif",alt: "blog" ,class: "gif1" , id:"gif1") %>
+                        <%= image_tag("blog-unscreen.gif",alt: "blog" ,class: "gif2" , id:"gif2") %>
+                        <h1 class="blog_create_head">Create Your Blog</h1>
+    <form action="/create_blog" method="post" enctype="multipart/form-data" class="create_blog_form">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-    <input type="text" placeholder="Enter the Title" name="home[blog_title]" required>
-    <input type="text" placeholder="Description" name="home[blog_description]" required>
-    <input type="file" placeholder="Enter the image" name="home[blog_image]" required>
-    <input type="submit">
+    <input type="text" placeholder="Enter the Title" name="home[blog_title]" class="blog_title1" required><br><br><br>
+    <input type="text" placeholder="Description" name="home[blog_description]" class="blog_description1" required><br><br><br>
+    <input type="file" placeholder="Enter the image" name="home[blog_image]" class="blog_image1" required><br><br><br>
+    <input type="submit" class="create_blog_button">
 </form>
-<a href="listblog">Blog List</a>
+<p class="all_blogs">To see all blogs &nbsp;<a href="listblog">click here</a></p>

@@ -4,9 +4,11 @@
               <div class="drop_down">
             <ul>
                 <ul>      
-                    <li>         
-                    </li>
-                    <li><a href="newblog">Blog</a><li>
+                    <li> 
+                    <a href="listblog">Blog</a>        
+                    </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">About</a><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Contact</a></li>
                 </ul>
                 <%if session[:user_id] !=nil%>
                     <li class="user_pers">
@@ -14,20 +16,17 @@
                         <% logged_user=User.find(session[:user_id]) %>
                             <%= logged_user["name"]%>
                                 <ul class="dropdown_logout">
-                                    <li><a href="#">Profile</a></li>
-                                    <li><a href="/logout">Logout</a></li>
-                                    <li><a href="/myblogs">My blogs</a></li>
+                                    <li><a href="#">Profile</a></li><br>
+                                    <li><a href="/logout">Logout</a></li><br>
+                                    <li><a href="/myblogs">Myblogs</a></li>
                                 </ul>
                     </li>
                     <%else%>
                         <a href="/login" class="login_btn1">SIGN IN</a>
                         <a href="/signup" class="signup_btn1">SIGN UP</a>
                         <%end%>
-<h1 class="blog_head">Publish  Your  Passions, Your  Way</h1>
-<p class="blog_sub">Create a Unique and beautiful blog.It's free and easy</p>
-<i class="fa-solid fa-gear settings"></i>
-<i class="fa-solid fa-music music"></i>
-<i class="fa-solid fa-city city"></i>
-<i class="fa-solid fa-earth-americas earth"></i>
+<h1 class="blog_head">Publish  Your  Passions, <br>Your  Way</h1>
+<h1 class="blog_sub">Create a Unique and beautiful blog<br>It's free and easy</h1>
+<%= image_tag("index.png",alt: "blog" ,class: "main_img" , id:"main_img") %>
 </div>
 </div>

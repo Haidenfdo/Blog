@@ -5,4 +5,5 @@ class User < ApplicationRecord
   :confirmation => true,
   :length => {:within => 6..40},
   :on => :create
+  has_one_attached :profile_image
 end

@@ -1,36 +1,40 @@
 
-<div class="total">
-      <h1 class="logo-img1">BLOG</h1>
-        <div class="drop_down">
+<div class="total2">
+
+     <h1 class="logo-img">B L O G</h1>
+              <div class="drop_down">
             <ul>
-             
+                <ul>      
+                    <li> 
+                    <a href="listblog">Blog</a>        
+                    </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">About</a><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Contact</a></li>
+                </ul>
                 <%if session[:user_id] !=nil%>
                     <li class="user_pers">
                         <i class="fa-solid fa-user logout"></i>
                         <% logged_user=User.find(session[:user_id]) %>
                             <%= logged_user["name"]%>
                                 <ul class="dropdown_logout">
-                                <li><a href="#">Profile</a></li>
-                                    <li><a href="/logout">Logout</a></li>
+                                    <li><a href="#">Profile</a></li><br>
+                                    <li><a href="/logout">Logout</a></li><br>
+                                    <li><a href="/myblogs">Myblogs</a></li>
                                 </ul>
                     </li>
                     <%else%>
-                        <a href="/login" class="login_btn">SIGN IN</a>
-                        <a href="/signup" class="signup_btn">SIGN UP</a>
+                        <a href="/login" class="login_btn1">SIGN IN</a>
+                        <a href="/signup" class="signup_btn1">SIGN UP</a>
                         <%end%>
+</div>  
 
-
-        </div>
-</div>
-<p class="sign_heading">Create your Profile</p>
-<%= image_tag("Group 7.png",alt: "sign_up" ,class: "signup_image" , id:"signup_image") %>
-<div class="sign_box">
-    <form action="users/create" method="post" onsubmit="submitFunction()">
+    <form action="users/create" method="post">
         <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-        <input type=" text" placeholder="First_name" name="users[name]" id="sign_inp11" required>
-        <input type="email" placeholder="Email" name="users[email]" id="sign_inp12" required>
-        <input type="password" placeholder="Create_password" id="sign_inp3" name="users[password]" title="Please enter the password between 6 to 12 characters"  required>
-        <input type="password" placeholder="Confirm_password" name="users[confirm_password]" id="sign_inp4" title="Please Enter the same password entered in the create password " required>
+        <input type=" text" placeholder="First_name" name="users[name]" id="sign_inp0" required><br>
+        <input type="email" placeholder="Email" name="users[email]" id="sign_inp" required><br>
+        <input type="password" placeholder="Create_password" id="sign_inp3" name="users[password]" title="Please enter the password between 6 to 12 characters"  required><br>
+        <input type="password" placeholder="Confirm_password" name="users[confirm_password]" id="sign_inp4" title="Please Enter the same password entered in the create password " required><br>
+        <input type="file" placeholder="Enter your photo" name="users[profile_image]" id="sign_inp5">
         <button type="submit" class="f_sub1">Submit</button>
         <% if flash[:error]%>
             <p class="text-error">
@@ -38,4 +42,3 @@
             </p>
             <% end %>
     </form>
-</div>

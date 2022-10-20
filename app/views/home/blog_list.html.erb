@@ -1,39 +1,44 @@
 
-<div class="total">
-      <h1 class="logo-img1">BLOG</h1>
-        <div class="drop_down">
+<div class="total2">
+     <h1 class="logo-img">B L O G</h1>
+              <div class="drop_down">
             <ul>
-             
+                <ul>      
+                    <li> 
+                    <a href="listblog">Blog</a>        
+                    </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">About</a><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Contact</a></li>
+                </ul>
                 <%if session[:user_id] !=nil%>
                     <li class="user_pers">
                         <i class="fa-solid fa-user logout"></i>
                         <% logged_user=User.find(session[:user_id]) %>
                             <%= logged_user["name"]%>
                                 <ul class="dropdown_logout">
-                                    <li><a href="#">Profile</a></li>
-                                    <li><a href="/logout">Logout</a></li>
+                                    <li><a href="#">Profile</a></li><br>
+                                    <li><a href="/logout">Logout</a></li><br>
+                                    <li><a href="/myblogs">Myblogs</a></li>
                                 </ul>
                     </li>
                     <%else%>
-                        <a href="/login" class="login_btn">SIGN IN</a>
-                        <a href="/signup" class="signup_btn">SIGN UP</a>
+                        <a href="/login" class="login_btn1">SIGN IN</a>
+                        <a href="/signup" class="signup_btn1">SIGN UP</a>
                         <%end%>
-
-
-        </div>
-</div><br>
 
 <% @list_blog.each do|item| %>
 <div class="full_blog">
-<h1 class="blog_title"><%=item.blog_title%></h1><hr>
+<h1 class="blog_title"><%=item.blog_title%></h1>
 <h4 class="blog_description"><%=item.blog_description%></h4>
-<%= image_tag(item.blog_image,class: "blog_image" )%><hr>
+<%= image_tag(item.blog_image,class: "blog_image" )%><br><br><hr>
 <i class="fa-regular fa-thumbs-up like"></i>
 <%if session[:user_id] !=nil%>
  <% logged_user=User.find(session[:user_id]) %>
-<a href="/comment/<%=item.id%>"><i class="fa-regular fa-comment comment"></i></a>
+<a href="/comment/<%=item.id%>"><i class="fa-regular fa-comment comment"></i></a><hr>
 </div><br><br><br>
 <%end%>
 
 <% end %>
+
+<a href="newblog"><button class="create_blog">+ Create Blog</button></a><br><br><br><br>    
 

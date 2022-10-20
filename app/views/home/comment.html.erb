@@ -1,4 +1,30 @@
-<div class="full_blog">
+
+<div class="total2">
+     <h1 class="logo-img">B L O G</h1>
+              <div class="drop_down">
+            <ul>
+                <ul>      
+                    <li> 
+                    <a href="listblog">Blog</a>        
+                    </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">About</a><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <%if session[:user_id] !=nil%>
+                    <li class="user_pers">
+                        <i class="fa-solid fa-user logout"></i>
+                        <% logged_user=User.find(session[:user_id]) %>
+                            <%= logged_user["name"]%>
+                                <ul class="dropdown_logout">
+                                    <li><a href="#">Profile</a></li><br>
+                                    <li><a href="/logout">Logout</a></li><br>
+                                    <li><a href="/myblogs">Myblogs</a></li>
+                                </ul>
+                    </li>
+                    <%else%>
+                        <a href="/login" class="login_btn1">SIGN IN</a>
+                        <a href="/signup" class="signup_btn1">SIGN UP</a>
+                        <%end%><div class="full_blog">
     <h1 class="blog_title"><%=@showblogs.blog_title%></h1><hr>
     <h4 class="blog_description"><%=@showblogs.blog_description%></h4>
     <%= image_tag(@showblogs.blog_image,class: "blog_image" )%><hr>
